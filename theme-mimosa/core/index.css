@@ -1,1 +1,117 @@
 @import url(../vendor/normalize.css);
+
+/* Basics
+----------------------------------------------------------------------------- */
+
+html {
+  color: #4d4d4d;
+  /* Line height: 20px/14px */
+  font-size: 14px/1.428571429;
+}
+
+/* Shared layout
+-----------------------------------------------------------------------------
+
+Note that this grid system intentionally does not support older IE rendering
+engines. Hacks for double-margin float bug are not here. In addition, we use
+CSS selectors that are not supported before IE7.
+*/
+
+/* Use:
+
+    <div class="grid-12 cf">
+      ...
+    </div>
+*/
+.grid-12,
+.grid-13 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class*="unit-"] {
+  float: left;
+  /* Prevent rows from collapsing if they don't have content. */
+  min-height: 1px;
+}
+
+/*
+For modern browsers. We have deliberately omitted the line that handles
+compatibility for < IE8.
+
+1. The space content is one way to avoid an Opera bug when the
+   contenteditable attribute is included anywhere else in the document.
+   Otherwise it causes space to appear at the top and bottom of elements
+   that are clearfixed.
+2. The use of `table` rather than `block` is only necessary if using
+   `:before` to contain the top-margins of child elements.
+*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+
+/* 12 Column Grid
+-----------------------------------------------------------------------------
+
+Unit:    40px
+Margin:  20px
+Gutters: 20px
+Total:   740px
+
+Remember, when creating percentage layouts target/context = result.
+*/
+
+.grid-12 {
+  max-width: 740px;
+}
+
+[class*="unit-"] {
+  float: left;
+  /* Prevent collapse of unit when empty */
+  min-height: 1px;
+  margin-left: 1.3513513513513513%;
+  margin-right: 1.3513513513513513%;
+}
+
+.grid-12 .unit-1 {
+  width: 8.108108108108109%;
+}
+.grid-12 .unit-2 {
+  width: 16.216216216216218%;
+}
+.grid-12 .unit-3 {
+  width: 24.324324324324326%;
+}
+.grid-12 .unit-4 {
+  width: 32.432432432432435%;
+}
+.grid-12 .unit-5 {
+  width: 40.54054054054054%;
+}
+.grid-12 .unit-6 {
+  width: 48.64864864864865%;
+}
+.grid-12 .unit-7 {
+  width: 56.75675675675676%;
+}
+.grid-12 .unit-8 {
+  width: 64.86486486486487%;
+}
+.grid-12 .unit-9 {
+  width: 72.97297297297297%;
+}
+.grid-12 .unit-10 {
+  width: 81.08108108108108%;
+}
+.grid-12 .unit-11 {
+  width: 89.1891891891892%;
+}
+.grid-12 .unit-12 {
+  width: 97.2972972972973%;
+}
+
