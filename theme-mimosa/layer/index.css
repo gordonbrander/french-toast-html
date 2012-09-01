@@ -1,3 +1,23 @@
-.screen--layer {
+/* Basics
+----------------------------------------------------------------------------- */
+
+.layer {
   background: #fafafa;
+}
+
+.layer--title {
+  color: #777;
+  font: normal normal 14px/20px Georgia, serif;
+  text-align: center;
+}
+
+/* Groups
+----------------------------------------------------------------------------- */
+
+.group--title {
+  color: #777;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
 }

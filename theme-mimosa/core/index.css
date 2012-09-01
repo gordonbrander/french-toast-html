@@ -35,9 +35,8 @@ CSS selectors that are not supported before IE7.
   min-height: 1px;
 }
 
-html body .grid--12 .unit--first,
-html body .grid--13 .unit--first {
-  margin-left: 0;
+.unit--first {
+  margin-left: 0 !important;
 }
 
 /*
@@ -116,4 +115,3 @@ Remember, when creating percentage layouts target/context = result.
 .grid--12 .unit--12 {
   width: 100%;
 }
-
