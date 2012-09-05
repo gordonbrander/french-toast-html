@@ -40,6 +40,16 @@ html {
   font: normal normal 14px/1.428571429 "Open Sans", serif;
 }
 
+/* Make images liquid by default */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+img.fixed {
+  max-width: auto;
+}
+
 /* Shared layout
 -----------------------------------------------------------------------------
 
