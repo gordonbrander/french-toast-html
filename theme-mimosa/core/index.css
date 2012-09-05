@@ -3,10 +3,41 @@
 /* Basics
 ----------------------------------------------------------------------------- */
 
+/* Import webfonts. This step will likely be uneccessary and ignored for the
+iPad environment. We plan on shipping the font files with the app itself.
+
+Currently only using `.woff`, since we aren't worried about older browsers.
+*/
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/opensans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/opensans-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/opensans-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/opensans-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 html {
   color: #4d4d4d;
   /* Line height: 20px/14px */
-  font: normal normal 14px/1.428571429 "Open Sans", sans-serif;
+  font: normal normal 14px/1.428571429 "Open Sans", serif;
 }
 
 /* Shared layout
@@ -73,7 +104,6 @@ Remember, when creating percentage layouts target/context = result.
 .grid--12 {
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 996px; /* 1024-28 */
 }
 
 .grid--12 [class*="unit--"] {
