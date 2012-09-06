@@ -155,3 +155,33 @@ Remember, when creating percentage layouts target/context = result.
 .grid--12 .unit--12 {
   width: 100%;
 }
+
+/* Modules
+----------------------------------------------------------------------------- */
+
+/* Snippet Module
+-----------------------------------------------------------------------------
+
+How to:
+
+    <div class="mod snippet">
+      <p class="content">...</p>
+    </div>
+*/
+
+.snippet {
+  background: #fff;
+}
+
+.snippet .content {
+  color: #444;
+  font: 14px/20px Georgia, serif;
+}
+
+/* Comment module
+----------------------------------------------------------------------------- */
+
+.comment {
+  background: #383d47;
+  border-radius: 0 0 5px 5px;
+}
