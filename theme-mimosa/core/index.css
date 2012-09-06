@@ -50,6 +50,27 @@ img.fixed {
   max-width: auto;
 }
 
+/* Set up basic typography. We've got a vertical rhythm of 10px. */
+
+p,
+ul,
+ol,
+dl,
+table {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 /* Shared layout
 -----------------------------------------------------------------------------
 
@@ -156,8 +177,17 @@ Remember, when creating percentage layouts target/context = result.
   width: 100%;
 }
 
-/* Modules
+/* Modules - Generic, nestable boxes of content.
 ----------------------------------------------------------------------------- */
+
+.mod .content {
+  /* Use margin collapse to ensure consistent bottom spacing
+  whether or not a paragraph is used.
+  
+  For this to work, `.content` must not be `overflow:hidden`;
+   */
+  margin-bottom: 20px;
+}
 
 /* Snippet Module
 -----------------------------------------------------------------------------
