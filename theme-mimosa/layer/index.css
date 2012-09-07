@@ -7,7 +7,7 @@
 
 .layer--title {
   color: #777;
-  font: normal normal 14px/20px Georgia, serif;
+  font: normal normal 14px/43px Georgia, serif;
   text-align: center;
 }
 
@@ -16,6 +16,8 @@
 
 .layer--header {
   background: url(border-with-shadow.png) bottom repeat-x;
+  height: 43px;
+  padding-bottom: 2px;
 }
 
 /* Groups
@@ -27,4 +29,9 @@
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.group--footer {
+  background: url(divider.png) right bottom no-repeat;
+  min-height: 35px;
 }
