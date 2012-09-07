@@ -201,6 +201,13 @@ How to:
 
 .snippet {
   background: #fff;
+  /* Contain margins. */
+  overflow: hidden;
+}
+
+/* In 6-column grid structures, snippets should be at least this tall. */
+.unit--6 .snippet {
+  min-height: 205px;
 }
 
 .snippet .content {
