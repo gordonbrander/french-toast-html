@@ -38,6 +38,7 @@ html {
   color: #4d4d4d;
   /* Line height: 20px/14px */
   font: normal normal 14px/1.428571429 "Open Sans", serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Make images liquid by default */
@@ -181,13 +182,38 @@ Remember, when creating percentage layouts target/context = result.
 /* Modules - Generic, nestable boxes of content.
 ----------------------------------------------------------------------------- */
 
-.mod .content {
+.mod {
+  margin-bottom: 20px;
+}
+
+.content {
   /* Use margin collapse to ensure consistent bottom spacing
   whether or not a paragraph is used.
   
   For this to work, `.content` must not be `overflow:hidden`;
    */
   margin-bottom: 20px;
+}
+
+/* Result module
+----------------------------------------------------------------------------- */
+
+.result--header .title {
+  color: #444;
+  font: 600 14px/20px "Open Sans", sans-serif;
+  margin-bottom: 5px;
+}
+
+.result--content {
+  color: #666666;
+  font: 12px/15px "Georgia", serif;
+  margin-bottom: 0;
+}
+
+.result--footer {
+  color: #999;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 /* Snippet Module
@@ -212,7 +238,6 @@ How to:
 }
 
 .snippet .content {
-  color: #444;
   font: 14px/20px Georgia, serif;
 }
 
