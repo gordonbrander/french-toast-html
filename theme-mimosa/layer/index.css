@@ -40,11 +40,16 @@
 .group--footer {
   background: url(divider.png) right bottom no-repeat;
   /* Allow footer to bleed over the next group */
-  bottom: -30px;
+  bottom: -31px;
   height: 35px;
   left: 0;
   position: absolute;
   right: 0;
   /* Make sure that the link stays clickable up top */
   z-index: 2;
+}
+
+.group--footer .toolbar--actions {
+  position: absolute;
+  right: 0;
 }
