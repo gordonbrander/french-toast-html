@@ -23,6 +23,12 @@
 /* Groups
 ----------------------------------------------------------------------------- */
 
+.group {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
 .group--title {
   color: #777;
   font-weight: bold;
@@ -33,5 +39,12 @@
 
 .group--footer {
   background: url(divider.png) right bottom no-repeat;
-  min-height: 35px;
+  /* Allow footer to bleed over the next group */
+  bottom: -30px;
+  height: 35px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  /* Make sure that the link stays clickable up top */
+  z-index: 2;
 }
