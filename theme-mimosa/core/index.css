@@ -247,4 +247,45 @@ How to:
 .comment {
   background: #383d47;
   border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  padding: 15px 15px 0;
+}
+
+.comment--header {
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  /* Make sure we contain the avatar. */
+  min-height: 25px;
+  padding-top: 5px;
+  /* Contains absolute elements. */
+  position: relative;
+  padding-left: 45px;
+}
+
+.comment--header .photo {
+  border: 2px solid #242526;
+  border-radius: 3px;
+  left: 0;
+  position: absolute;
+  top: -1px;
+}
+
+.comment--header .author {
+  display: inline;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.comment--header .board {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.comment--content {
+  color: #b7b7b7;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 15px;
 }
