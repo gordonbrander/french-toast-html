@@ -180,7 +180,21 @@ Remember, when creating percentage layouts target/context = result.
 }
 
 /* Modules - Generic, nestable boxes of content.
------------------------------------------------------------------------------ */
+-----------------------------------------------------------------------------
+
+What they look like:
+
+    <article class="mod">
+      <div class="media">...</div>
+      <h1 class="title">...</h1>
+      <div class="content">...</div>
+    </article>
+
+Of course, this basic markup pattern is very flexible. Add `<header>`,
+`<footer>` as necessary. You can (and probably should) also create 
+specialized classes for modules that will be nested (e.g. `.pin--content`),
+and target your styles to those.
+*/
 
 .mod {
   margin-bottom: 20px;
