@@ -4,7 +4,7 @@
 ----------------------------------------------------------------------------- */
 
 /* Import webfonts. This step will likely be uneccessary and ignored for the
-iPad environment. We plan on shipclipg the font files with the app itself.
+iPad environment. We plan on shipping the font files with the app itself.
 
 Currently only using `.woff`, since we aren't worried about older browsers.
 */
@@ -235,12 +235,12 @@ and target your styles to those.
 
 A composite `.mod` made up of several sub-modules. */
 
-.clip--media {
+.update--media {
   /* Remove default `.mod` bottom margin. */
   margin-bottom: 0
 }
 
-.clip--comments {
+.update--comments {
   background: #383d47;
   border-radius: 0 0 5px 5px;
   overflow: hidden;
@@ -288,8 +288,8 @@ A clipped webpage.
   overflow: hidden;
 }
 
-/* Make sure that `.webpage` inside of `.clip` is displayed on top of comments. */
-.clip .webpage {
+/* Make sure that `.webpage` inside of `.update` is displayed on top of comments. */
+.update .webpage {
   position: relative;
   z-index: 2;
 }
@@ -297,10 +297,27 @@ A clipped webpage.
 .webpage .media {
   background: #000;
   margin-bottom: 10px;
+  position: relative;
 }
 .webpage .media img {
   display: block;
   margin: 0 auto;
+}
+
+/* Highlighted border for images. Causes images to appear glossy, or shiny.
+If we experience performance issues, it may be worth removing this to see
+if it helps. */
+.webpage .media:before {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-width: 1px 1px 0;
+  border-radius: 5px 5px 0 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .webpage .title,
@@ -334,12 +351,12 @@ A clipped webpage.
   padding: 15px 15px 0;
 }
 
-.clip--comments .comment {
+.update--comments .comment {
   margin-bottom: 0;
 }
 
 /* Zebra-strip lists of comments */
-.clip--comments .comment:nth-child(even) {
+.update--comments .comment:nth-child(even) {
   background: #2e323b;
 }
 
