@@ -355,6 +355,8 @@ if it helps. */
 .webpage--small .title {
   font-size: 12px;
   font-weight: normal;
+  margin-left: 5px;
+  margin-right: 5px;
   overflow: hidden;
   white-space: nowrap;
 }
