@@ -220,17 +220,24 @@ and target your styles to those.
 
 /* Result module
 ----------------------------------------------------------------------------- */
+.result .title,
+.result .content,
+.result .footer {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .result--header .title {
   color: #444;
   font: 600 14px/20px "Open Sans", sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .result--content {
   color: #666666;
   font: 12px/15px "Georgia", serif;
-  margin-bottom: 0;
+  margin-bottom: 3px;
 }
 
 .result--footer {
