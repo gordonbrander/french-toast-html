@@ -200,6 +200,11 @@ and target your styles to those.
   margin-bottom: 20px;
 }
 
+.title {
+  /* Fancy overflow when needed. */
+  text-overflow: ellipsis;
+}
+
 .content {
   /* Use margin collapse to ensure consistent bottom spacing
   whether or not a paragraph is used.
@@ -340,6 +345,18 @@ if it helps. */
 }
 .webpage .content p {
   margin-bottom: 10px;
+}
+
+/* Smaller excerpted webpage clip. */
+.webpage--small .title {
+  font-size: 12px;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.webpage--small .media,
+.webpage--small .title {
+  margin-bottom: 5px;
 }
 
 /* Comment module
