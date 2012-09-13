@@ -240,6 +240,14 @@ A composite `.mod` made up of several sub-modules. */
   margin-bottom: 0
 }
 
+.clip--comments {
+  background: #383d47;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  margin-top: -5px;
+  padding-top: 5px;
+}
+
 /* Snippet Module
 -----------------------------------------------------------------------------
 
@@ -309,6 +317,7 @@ A clipped webpage.
 }
 
 .webpage .content {
+  color: #555;
   font: 12px/15px Georgia, serif;
   margin-bottom: 15px;
 }
@@ -319,23 +328,18 @@ A clipped webpage.
 /* Comment module
 ----------------------------------------------------------------------------- */
 
-.comment-stream {
-  border-radius: 0 0 5px 5px;
-  overflow: hidden;
-}
-
 .comment {
   background: #383d47;
   overflow: hidden;
   padding: 15px 15px 0;
 }
 
-.comment-stream .comment {
+.clip--comments .comment {
   margin-bottom: 0;
 }
 
 /* Zebra-strip lists of comments */
-.comment-stream .comment:nth-child(even) {
+.clip--comments .comment:nth-child(even) {
   background: #2e323b;
 }
 
