@@ -273,9 +273,17 @@ A clipped webpage.
 
 .webpage {
   background: #fff;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, .3); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, .3); /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
   color: #444;
   border-radius: 5px;
   overflow: hidden;
+}
+
+/* Make sure that `.webpage` inside of `.clip` is displayed on top of comments. */
+.clip .webpage {
+  position: relative;
+  z-index: 2;
 }
 
 .webpage .media {
@@ -311,11 +319,24 @@ A clipped webpage.
 /* Comment module
 ----------------------------------------------------------------------------- */
 
-.comment {
-  background: #383d47;
+.comment-stream {
   border-radius: 0 0 5px 5px;
   overflow: hidden;
+}
+
+.comment {
+  background: #383d47;
+  overflow: hidden;
   padding: 15px 15px 0;
+}
+
+.comment-stream .comment {
+  margin-bottom: 0;
+}
+
+/* Zebra-strip lists of comments */
+.comment-stream .comment:nth-child(even) {
+  background: #2e323b;
 }
 
 .comment--header {
