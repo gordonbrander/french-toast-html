@@ -359,16 +359,24 @@ if it helps. */
 }
 
 /* Smaller excerpted webpage clip. */
+.webpage--small .header {
+  margin: 0 5px 5px;
+  padding-left: 25px;
+  position: relative;
+}
+.webpage--small .favicon {
+  left: 0;
+  position: absolute;
+  top: 2px;
+}
 .webpage--small .title {
   font-size: 12px;
   font-weight: normal;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0 0 5px;
   overflow: hidden;
   white-space: nowrap;
 }
-.webpage--small .media,
-.webpage--small .title {
+.webpage--small .media {
   margin-bottom: 5px;
 }
 
